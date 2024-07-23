@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leisure and Dining</title>
+    <link rel="icon" type="image/x-icon" href="src/logonew.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        /* top rated  */
+      
+
+        .topresturant .imgdiv {
+            margin-bottom: 10px;
+            border-radius: 10px;
+            width: 100%;
+            height: 140px;
+        }
+
+        .topresturant p {
+            font-size: 14px;
+        }
+
+        .topresturant h6 {
+            font-size: 17px;
+            margin-bottom: 0px;
+        }
+
+        .topresturant .resturant {
+            box-shadow: 0px 0px 10px 0px rgb(238, 238, 238);
+            margin: 20px;
+            cursor: pointer;
+            background-color: white;
+        }
+    .topresturant .resturant:hover{
+        box-shadow: 0px 0px 10px 0px rgb(230, 230, 230);
+
+    }
+        @media only screen and (max-width:700px) {
+            .topresturant .resturant {
+                margin: 10px;
+            }
+        }
+
+        .topresturant p {
+            color: rgb(84, 84, 84);
+
+        }
+
+        @media only screen and (max-width: 780px) {
+            .topresturant p {
+                font-size: 12px;
+            }
+
+            .topresturant h6 {
+                font-size: 15px;
+            }
+
+        }
+
+
+
+
+        /* modal  */
+        .modal p{
+            font-size: 14px;
+        }
+        .modal .menuimg{
+            width: 100px;
+        }
+        @media only screen and (max-width:344px) {
+           .modal .menuimg{
+            width: 80px;
+        }
+        .modal .modal-body{
+            padding: 0px;
+        }
+        .modal .container{
+            padding: 0px;
+        }
+        }
+/* All resturants  */
+        .allresturant h6 {
+            margin-bottom: 0px;
+        }
+
+        .allresturant .imgdiv {
+            margin-bottom: 10px;
+            border-radius: 10px;
+            width: 100%;
+            height: 170px;
+        }
+
+        .allresturant .resturant {
+            border-radius: 10px;
+            /* border: 1px solid black; */
+            box-shadow: 0px 0px 10px 0px rgb(238, 238, 238);
+            background-color: white;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        .allresturant .resturant:hover{
+            box-shadow: 0px 0px 10px 0px rgb(230, 230, 230);
+            transform: translateY(-8px);
+        }
+        .allresturant .main {
+            padding: 20px;
+        }
+
+        .allresturant p {
+            font-size: 14px;
+            color: rgb(84, 84, 84);
+        }
+
+        .allresturant h6{
+            font-size: 17px;
+            margin-bottom: 0px;
+        }
+
+        .allresturant button {
+
+            background-color: rgb(121, 38, 237);
+            margin-top: 20px;
+            padding: 10px 20px  10px 20px;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0px 0px 10px 0px white;
+            border: 1px solid rgb(121, 38, 237);
+            transition: 0.3s;
+
+
+        }
+
+        .allresturant button:hover {
+            background-color: white;
+            color: rgb(121, 38, 237);
+            box-shadow: 0px 0px 10px 0px 7926ED;
+            cursor: pointer;
+            border: 0.5px solid rgb(121, 38, 237);
+        }
+
+        @media only screen and (max-width: 780px) {
+            .allresturant p {
+                font-size: 12px;
+            }
+
+            .allresturant h6 {
+                font-size: 15px;
+            }
+
+            .allresturant button {
+                font-size: 15px;
+            }
+
+        }
+
+        @media only screen and (max-width:992px) {
+            .allresturant .resturant {
+                margin: 10px;
+            }
+        }
+
+        @media only screen and (max-width:380px) {
+            .allresturant .main {
+                padding: 0px;
+            }
+
+            .resturant {
+                margin: 10px 0px 10px 0px;
+            }
+        }
+
+        .allresturant .rowhide {
+            display: none;
+        }
+
+
+    </style>
+</head>
+
+<body>
+ 
+   
+<!-- navbar  -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <div style="width: 70px; height: 70px; background: url(src/logonew.png); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link mx-3" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown mx-3">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Funzone Adventures
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item ddlink" href="Experience.html">Experience</a></li>
+                        <li><a class="dropdown-item ddlink" href="LeisureAndDiningpg.html">Leisure and Dining</a></li>
+                        <li><a class="dropdown-item ddlink" href="parkcharacterpg.html">Parks Characters</a></li>
+                        <li><a class="dropdown-item ddlink" href="whatsuppg.html">Whats Up</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="parkinformation.html">Park Information</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="Businessoppor.html">Business Opportunities</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    
+    
+<!-- Gradient circle -->
+
+<div class="circle circle1"></div>
+
+<div class="circle circle2"></div> 
+<div class="circle circle3"></div>
+<div class="circle circle4"></div>
+
+<!-- Elements  -->
+
+<div class="ele1"><img   src="src/shape2.png" alt=""></div>
+<div class="ele2"><img  src="src/shape1.png" alt=""></div>
+<div class="ele3"><img   src="src/shape3.png" alt=""></div>
+<!-- <div class="ele4"><img  src="src/shape4.png" alt=""></div> -->
+<!-- <div class="ele5"><img  src="src/shape2.png" alt=""></div> -->
+
+
+<!-- bounce img  -->
+<img class="bounceimg" src="src/bouncing img.png" alt="">
+
+
+
+  <!-- Hero section -->
+  <div class="hero-section">
+    <div class="hero-image d-flex justify-content-center align-items-center">
+        <div style="display: grid; justify-content: center;" class="main container">
+            <h1 class="text-center text-white">Discover the Magic of   <span style="color: rgb(242,145,38);">Fun Zone</span></h1>
+            <p class="text-center text-white">Exciting rides, delicious dining, unforgettable fun at funzone. Join us today! and
+                make memories.</p>
+          <a  class="mx-auto"  href="index.html"><button >Explore More</button></a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Top Rated -->
+<h1 class="m-5 text-center fw-bold">Top Rated <span style="color: rgb(242,145,38);">Resturants</span></h1>
+<div class="topresturant">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active ">
+                <div class="row justify-content-center  flex-nowrap">
+                    <div  data-bs-toggle="modal" data-bs-target="#exampleModal" style=" border-radius: 10px;"
+                        class="col-6  col-xxl-2 col-xl-2 col-lg-3 col-md-4  col-sm-5  p-3 resturant">
+                        <div class="imgdiv"
+                            style="width: 100%; height: 140px; background: url(src/dunkin\ donuts.png); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                        </div>
+                        <h6>Dunkin Donuts</h6>
+                        <p>Desert</p>
+                    </div>
+                    <div  data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 10px;"
+                        class="col-6 col-xxl-2 col-xl-2 col-lg-3 col-md-4  col-sm-5        p-3 resturant">
+                        <div class="imgdiv"
+                            style="width: 100%; height: 140px;  background: url(src/spicenation.png); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                        </div>
+                        <h6>Spice Nation</h6>
+                        <p>Fast Food</p>
+                    </div>
+                    <div  data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 10px;"
+                        class="col-6  col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-5  p-3 resturant">
+                        <div class="imgdiv"
+                            style="width: 100%; height: 140px;  background: url(src/burgerlab2.png); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                        </div>
+                        <h6>Burger Lab</h6>
+                        <p>Fast Food</p>
+                    </div>
+                    <div  data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 10px;"
+                        class="col-6  col-xxl-2 col-xl-2 col-lg-3 col-md-4  col-sm-5  p-3 resturant">
+                        <div class="imgdiv"
+                            style="width: 100%; height: 140px;  background: url(src/kabab\ jees.png); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                        </div>
+                        <h6>Kabab Jees</h6>
+                        <p>Fast Food</p>
+                    </div>
+                    <div  data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 10px;"
+                        class="col-6 col-xxl-2 col-xl-2 col-lg-3 col-md-4  col-sm-5  p-3 resturant">
+                        <div class="imgdiv"
+                            style="width: 100%; height: 140px;  background: url(src/craving\ corner.jpeg); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                        </div>
+                        <h6>Craving Corner</h6>
+                        <p>Pakistani</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="carousel-item">
+                <div class="row justify-content-center  flex-nowrap">
+                    <div  data-bs-toggle="modal" data-bs-target="#exampleModal" style=" border-radius: 10px;"
+                        class="col-6  col-xxl-2 col-xl-2 col-lg-3 col-md-4  col-sm-5            p-3 resturant">
+                        <div class="imgdiv"
+                            style="width: 100%; height: 140px; background: url(src/pizzahut.avif); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                        </div>
+                        <h6>Pizza Hut</h6>
+                        <p>Fast Food</p>
+                    </div>
+                    <div  data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 10px;"
+                        class="col-6 col-xxl-2 col-xl-2 col-lg-3 col-md-4  col-sm-5        p-3 resturant">
+                        <div class="imgdiv"
+                            style="width: 100%; height: 140px;  background: url(src/baqbq.webp); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                        </div>
+                        <h6>Karachi Bar B Q</h6>
+                        <p>Pakistani</p>
+                    </div>
+                    <div  data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 10px;"
+                        class="col-6  col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-5   p-3 resturant">
+                        <div class="imgdiv"
+                            style="width: 100%; height: 140px;  background: url(src/texas.jpg); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                        </div>
+                        <h6>Texas Burger</h6>
+                        <p>Fast Food</p>
+                    </div>
+                    <div  data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 10px;"
+                        class="col-6  col-xxl-2 col-xl-2 col-lg-3 col-md-4  col-sm-5        p-3 resturant">
+                        <div class="imgdiv"
+                            style="width: 100%; height: 140px;  background: url(src/hassan\ zai.jpg); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                        </div>
+                        <h6>Hassan Zai</h6>
+                        <p>Fast Food</p>
+                    </div>
+                    <div  data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 10px;"
+                        class="col-6 col-xxl-2 col-xl-2 col-lg-3 col-md-4  col-sm-5        p-3 resturant">
+                        <div class="imgdiv"
+                            style="width: 100%; height: 140px;  background: url(src/foodist.jpg); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                        </div>
+                        <h6>Foodist</h6>
+                        <p>Fast Food</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span style="background-color:  rgb(121, 38, 237); border-radius: 50%;"
+                class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span style="background-color:  rgb(121, 38, 237); border-radius: 50%;"
+                class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+</div>
+
+
+<h1 class="m-5 text-center fw-bold">All <span style="color: rgb(242,145,38);">Resturants</span></h1>
+<!-- All Resturant  -->
+    <div class="mt-5 allresturant container">
+
+
+        <div class="row justify-content-around mt-4">
+            <div  data-bs-toggle="modal" data-bs-target="#exampleModal" class="col-8 col-xl-3 col-lg-3 col-md-5 col-sm-5 mb-4  p-3 resturant">
+                <div class="imgdiv"
+                    style="background: url(src/foodist.jpg); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                </div>
+                <h6>Foodist</h6>
+                <p>Fast Food</p>
+            </div>
+            <div  data-bs-toggle="modal" data-bs-target="#exampleModal" class="col-8 col-xl-3 col-lg-3 col-md-5 col-sm-5 mb-4   p-3  resturant">
+                <div class="imgdiv"
+                    style="background: url(src/hassan\ zai.jpg); background-size: cover; background-repeat: no-repeat; background-position: bottom;">
+                </div>
+                <h6>Hassan Zai</h6>
+                <p>Fast Food</p>
+            </div>
+            <div  data-bs-toggle="modal" data-bs-target="#exampleModal" class="col-8 col-xl-3 col-lg-3 col-md-5 col-sm-5 mb-4  p-3 resturant">
+                <div class="imgdiv"
+                    style=" background: url(src/majestic\ res.jpg); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                </div>
+                <h6>Majestic Resturant</h6>
+                <p>Pakistani</p>
+            </div>
+
+        </div>
+
+
+
+        <div class="row justify-content-around mt-4">
+            <div  data-bs-toggle="modal" data-bs-target="#exampleModal" class="col-8 col-xl-3 col-lg-3  col-md-5 col-sm-5  mb-4  p-3 resturant">
+                <div class="imgdiv"
+                    style="background: url(src/pizzahut.avif); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                </div>
+                <h6>Pizza Hut</h6>
+                <p>Fast Food</p>
+            </div>
+            <div  data-bs-toggle="modal" data-bs-target="#exampleModal" class="col-8 col-xl-3 col-lg-3  col-md-5 col-sm-5 mb-4  p-3  resturant">
+                <div class="imgdiv"
+                    style="background: url(src/kabab\ jees.png); background-size: cover; background-repeat: no-repeat; background-position: bottom;">
+                </div>
+                <h6>Kabab Jess</h6>
+                <p>Fast Food</p>
+            </div>
+            <div  data-bs-toggle="modal" data-bs-target="#exampleModal" class="col-8 col-xl-3 col-lg-3 col-md-5 col-sm-5  mb-4  p-3 resturant">
+                <div class="imgdiv"
+                    style="background: url(src/burgerlab2.png); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                </div>
+                <h6>Burger Lab</h6>
+                <p>Fast Food</p>
+            </div>
+
+        </div>
+        <div class="row justify-content-around mt-4 rowhide">
+            <div  data-bs-toggle="modal" data-bs-target="#exampleModal" class="col-8 col-xl-3 col-lg-3  col-md-5 col-sm-5  mb-4  p-3 resturant">
+                <div class="imgdiv"
+                    style="background: url(src/spicenation.png); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                </div>
+                <h6>Spice Nation</h6>
+                <p>Fast Food</p>
+            </div>
+            <div  data-bs-toggle="modal" data-bs-target="#exampleModal" class="col-8 col-xl-3 col-lg-3 col-md-5 col-sm-5  mb-4  p-3  resturant">
+                <div class="imgdiv"
+                    style="background: url(src/burger\ clock.avif); background-size: cover; background-repeat: no-repeat; background-position: bottom;">
+                </div>
+                <h6>Burger O Clock</h6>
+                <p>Fast Food</p>
+            </div>
+            <div  data-bs-toggle="modal" data-bs-target="#exampleModal" class="col-8 col-xl-3 col-lg-3 col-md-5 col-sm-5  mb-4  p-3 resturant">
+                <div class="imgdiv"
+                    style="background: url(src/craving\ corner.jpeg); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                </div>
+                <h6>Craving Corner</h6>
+                <p>Pakistani</p>
+            </div>
+
+        </div>
+       
+
+        <div id="hide" class="row justify-content-around mt-4 rowhide">
+            <div  data-bs-toggle="modal" data-bs-target="#exampleModal" class="col-8 col-xl-3 col-lg-3  col-md-5 col-sm-5  mb-4  p-3 resturant">
+                <div class="imgdiv"
+                    style="background: url(src/texas.jpg); background-size: cover; background-repeat: no-repeat; background-position:bottom;">
+                </div>
+                <h6>Texas Burger</h6>
+                <p>Fast Food</p>
+            </div>
+            <div  data-bs-toggle="modal" data-bs-target="#exampleModal" class="col-8 col-xl-3 col-lg-3  col-md-5 col-sm-5  mb-4  p-3  resturant">
+                <div class="imgdiv"
+                    style="background: url(src/hafeezroll.webp); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                </div>
+                <h6>Hafeez Roll</h6>
+                <p>Fast Food</p>
+            </div>
+            <div  data-bs-toggle="modal" data-bs-target="#exampleModal" class="col-8 col-xl-3 col-lg-3 col-md-5 col-sm-5  mb-4  p-3 resturant">
+                <div class="imgdiv"
+                    style="background: url(src/baqbq.webp); background-size: cover; background-repeat: no-repeat; background-position: cover;">
+                </div>
+                <h6>Karachi Bar B Q</h6>
+                <p>Pakistani</p>
+            </div>
+
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <button id="seemorebtn" onclick="seemore()">See More</button>
+        </div>
+    </div>
+
+
+    
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+
+
+
+        <div class="modal-body">
+
+          <div class="container">
+
+
+            <div style="border: 1px solid rgb(207, 207, 207); border-radius: 8px;" class="row m-3">
+               
+                <div class="col-7 d-flex align-items-center">
+                 <div>
+                    <h6 class="mt-1">Broast-Quarter</h6>
+                    <p>Rs 476</p>
+                    <p>Two piece broasted chicken serve with fries,bun and two sauces</p>
+                </div>
+                </div>
+
+                <div class="col-5 d-flex align-items-center justify-content-center">
+                    <img class="menuimg" src="src/broast quarter.png" alt="">
+                </div>
+
+            </div>
+
+            <div style="border: 1px solid rgb(207, 207, 207); border-radius: 8px;" class="row m-3">
+               
+                <div class="col-7 d-flex align-items-center">
+                 <div>
+                    <h6 class="mt-1">Broast-Leg</h6>
+                    <p>Rs 952</p>
+                    <p>Four piece broasted chicken serve with fries,bun and two sauces</p>
+                </div>
+                </div>
+
+                <div class="col-5 d-flex align-items-center justify-content-center">
+                    <img class="menuimg" src="src/broast leg.png" alt="">
+                </div>
+
+            </div>
+
+    <div style="border: 1px solid rgb(207, 207, 207); border-radius: 8px;" class="row m-3">
+               
+                <div class="col-7 d-flex align-items-center">
+                 <div>
+                    <h6 class="mt-1">Club Sandwich</h6>
+                    <p>Rs 500</p>
+                    <p>serves 1</p>
+                </div>
+                </div>
+
+                <div class="col-5 d-flex align-items-center justify-content-center">
+                    <img class="menuimg" src="src/club sandwich.png" alt="">
+                </div>
+
+            </div>
+
+            <div style="border: 1px solid rgb(207, 207, 207); border-radius: 8px;" class="row m-3">
+               
+                <div class="col-7 d-flex align-items-center">
+                 <div>
+                    <h6 class="mt-1">Regular Fries</h6>
+                    <p>Rs 200</p>
+                    <p>serves 1</p>
+                </div>
+                </div>
+
+                <div class="col-5 d-flex align-items-center justify-content-center">
+                    <img class="menuimg" src="src/fries.png" alt="">
+                </div>
+
+            </div>
+
+
+            <div style="border: 1px solid rgb(207, 207, 207); border-radius: 8px;" class="row m-3">
+               
+                <div class="col-7 d-flex align-items-center ">
+                 <div>
+                    <h6 class="mt-1">Zinger Burger</h6>
+                    <p>Rs 460</p>
+                    <p>serves 1</p>
+                </div>
+                </div>
+
+                <div class="col-5 d-flex align-items-center justify-content-center">
+                    <img class="menuimg" src="src/Zinger-Burger.png" alt="">
+                </div>
+
+            </div>
+
+
+
+
+
+          </div>
+
+
+        </div>
+
+
+
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer  -->
+  <footer class="mt-5">
+    <div class="container">
+        <div class="footer-row">
+            <div class="footer-column">
+                <h2 class="footer-heading">About Us</h2>
+                <p class="footer-text">Funzone is dedicated to providing exhilarating experiences for thrill-seekers
+                    of all ages. Explore our diverse range of rides and attractions!</p>
+            </div>
+            <div class="footer-column">
+                <h2 class="footer-heading">Quick Links</h2>
+                <ul class="footer-list">
+                    <li><a href="index.html" class="footer-link">Home</a></li>
+                    <li><a href="parkcharacterpg.html" class="footer-link">Park Character</a></li>
+                    <li><a href="LeisureAndDiningpg.html" class="footer-link">Leisure and Dining</a></li>
+                    <li><a href="whatsuppg.html" class="footer-link">Whats Up</a></li>
+                    <li><a href="Experience.html" class="footer-link">Experience</a></li>
+                    <li><a href="parkinformation.html" class="footer-link">Park Information</a></li>
+                    <li><a href="Businessoppor.html" class="footer-link">Business Opportunities</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h2 class="footer-heading">Contact Us</h2>
+                <ul class="footer-list">
+                    <li><i class="fa fa-phone"></i> +123-456-7890</li>
+                    <li><i class="fa fa-envelope"></i> info@funzone.com</li>
+                    <li><i class="fa fa-map-marker"></i> 123 Fun Street, Cityville</li>
+                </ul>
+                <div class="social-icons">
+                    <a target="_blank" href="https://www.facebook.com/" class="footer-link"><i class="fab fa-facebook"></i></a>
+                    <!-- <a target="_top" href="www" class="footer-link"><i class="fab fa-twitter"></i></a> -->
+                    <a target="_blank" href="https://www.instagram.com/" class="footer-link"><i
+                            class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/" class="footer-link"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="footer-text">&copy; 2024 Funzone | Designed by Your Company</p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+    <script>
+        function seemore() {
+            var elements = document.getElementsByClassName("rowhide");
+            document.getElementById("seemorebtn").style.display = "none";
+
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.display = "flex";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentLocation = window.location.pathname.split("/").pop();
+            const navLinks = document.querySelectorAll('.nav-link, .ddlink');
+            const funzonePages = ['Experience.html', 'LeisureAndDiningpg.html', 'parkcharacterpg.html', 'whatsuppg.html'];
+
+            let isFunzoneActive = false;
+
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href').split("/").pop();
+                if (linkPath === currentLocation) {
+                    link.classList.add('active');
+                    if (funzonePages.includes(linkPath)) {
+                        isFunzoneActive = true;
+                    }
+                }
+            });
+
+            if (isFunzoneActive) {
+                document.querySelector('.nav-item.dropdown .nav-link').classList.add('active');
+            }
+        });
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

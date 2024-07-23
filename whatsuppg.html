@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whats Up</title>
+    <link rel="icon" type="image/x-icon" href="src/logonew.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="./index.js"></script>
+    <style>
+     .modal .error{
+        color: red;
+      }
+       .eventsection .icon:before {
+            content: "";
+            background-image: url('src/icon\ _calendar_.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            position: relative;
+            top: 2px;
+        }
+
+        .eventsection p {
+            color: rgb(74, 74, 74);
+
+        }
+
+        .eventsection h1 {
+            color: rgb(121, 38, 237);
+        }
+
+        .eventsection .btn,
+        .eventsection .btn2 {
+            padding: 10px;
+            padding: 10px 20px 10px 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .eventsection .btn {
+            background-color: rgb(121, 38, 237);
+            color: white;
+            box-shadow: 0px 0px 10px 0px white;
+            border: 1px solid rgb(121, 38, 237);
+            margin-left: 10px;
+
+        }
+
+        .eventsection .butn {
+            margin-left: 10px;
+        }
+
+        .eventsection .btn:hover {
+            background-color: white;
+            color: rgb(121, 38, 237);
+            box-shadow: 0px 0px 10px 0px 7926ED;
+            cursor: pointer;
+            border: 0.5px solid rgb(121, 38, 237);
+        }
+
+        .eventsection .btn2 {
+            background-color: rgb(245, 245, 245);
+            color: rgb(74, 74, 74);
+            border: 1px solid rgb(245, 245, 245);
+
+        }
+
+        .eventsection .btn2:hover {
+            background-color: rgb(227, 227, 227);
+            color: rgb(74, 74, 74);
+            cursor: pointer;
+            border: 0.5px solid rgb(227, 227, 227);
+
+        }
+
+        .eventsection .main {
+            margin-top: 70px;
+        }
+
+        @media only screen and (max-width: 780px) {
+            .eventsection .main {
+                margin-top: 30px;
+            }
+
+            .eventsection .para,
+            .eventsection p {
+                font-size: 14px;
+
+            }
+
+
+            .eventsection h1 {
+                font: 24px;
+            }
+
+            .eventsection .btn,
+            .eventsection .btn2 {
+                font-size: 15px;
+            }
+            .modal span,.modal p,.modal input,.modal label,.modal select{
+    font-size: 15px;
+}
+.modal h5{
+    font-size: 17px;
+}
+.modal button{
+    font-size: 15px;
+}
+        }
+
+        @media only screen and (min-width: 396px) and (max-width: 507px) {
+            .eventsection .btn {
+                margin: 0px;
+                margin-top: 10px;
+
+            }
+        }
+
+        @media only screen and (max-width: 395px) {
+            .eventsection .butn {
+                margin-top: 10px;
+                margin-left: 0px;
+            }
+
+     
+        }
+        @media only screen and (max-width: 288px) {
+            .eventsection .btn {
+            
+                margin-top: 10px;
+                margin-left: 0px;
+
+            } 
+        }
+        
+        @media only screen and (max-width: 502px) {
+            .eventsection .imgdiv {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 10px;
+
+            }
+
+            .eventsection .imgdiv img {
+                width: 100%;
+            }
+
+        }
+
+        .custom-select{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: url('data:image/svg+xml;utf8,<svg fill="%23333" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center/12px 12px;
+            padding-right: 30px;
+        }
+
+     
+    </style>
+
+</head>
+
+<body>
+
+    
+<!-- Gradient circle -->
+
+<div class="circle circle1"></div>
+
+<div class="circle circle2"></div> 
+<div class="circle circle3"></div>
+<div class="circle circle4"></div>
+
+
+<!-- <div class="circle circle8"></div>
+<div class="circle circle9"></div> -->
+<!-- Elements  -->
+
+<div class="ele1"><img   src="src/shape2.png" alt=""></div>
+<div class="ele2"><img  src="src/shape1.png" alt=""></div>
+<div class="ele3"><img   src="src/shape3.png" alt=""></div>
+<!-- <div class="ele4"><img  src="src/shape4.png" alt=""></div>
+<div class="ele5"><img  src="src/shape2.png" alt=""></div> -->
+
+
+<!-- bounce img  -->
+<img class="bounceimg" src="src/bouncing img.png" alt="">
+
+
+<!-- navbar  -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <div style="width: 70px; height: 70px; background: url(src/logonew.png); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link mx-3" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown mx-3">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Funzone Adventures
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item ddlink" href="Experience.html">Experience</a></li>
+                        <li><a class="dropdown-item ddlink" href="LeisureAndDiningpg.html">Leisure and Dining</a></li>
+                        <li><a class="dropdown-item ddlink" href="parkcharacterpg.html">Parks Characters</a></li>
+                        <li><a class="dropdown-item ddlink" href="whatsuppg.html">Whats Up</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="parkinformation.html">Park Information</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="Businessoppor.html">Business Opportunities</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+  <!-- Hero section -->
+  <div class="hero-section">
+    <div class="hero-image d-flex justify-content-center align-items-center">
+        <div style="display: grid; justify-content: center;" class="main container">
+            <h1 class="text-center text-white">Discover the Magic of   <span style="color: rgb(242,145,38);">Fun Zone</span></h1>
+            <p class="text-center text-white">Exciting rides, delicious dining, unforgettable fun at funzone. Join us today! and
+                make memories.</p>
+                <a  class="mx-auto"  href="index.html"><button >Explore More</button></a>
+
+        </div>
+    </div>
+</div>
+
+
+    <div class="container eventsection">
+
+        <h1 class="text-center mt-5 fw-bold" style="color: black;">Upcoming <span style="color: rgb(242,145,38);">Events</span></h1>
+
+
+        <div class="main">
+            <h1 class="fw-semibold">Summer Splash Party</h1>
+            <p class="icon mb-0">14-08-2024 8:00am - 14-08-2024 8:00pm</p>
+            <p style="  color: rgb(121, 38, 237);">123 FunStreet ,CityVilla </p>
+
+            <div class="col-12  rounded-4 my-4 mx-auto txt">
+                <div style=" float: left;" class="small-img me-4 imgdiv"> <img style="border-radius: 10px;"
+                        src="src/summer.png" alt=""></div>
+                <div class="para" style="color: rgb(74, 74, 74);">Get ready to make a splash at Funzone Park's Summer
+                    Splash Party!
+                    It's the ultimate celebration of sun-soaked fun and excitement, where the cool waters beckon and the
+                    good times flow. Join us as we turn up the heat with an array of exhilarating water games, from
+                    thrilling slides to playful splash zones, perfect for beating the summer heat. Dance to the rhythm
+                    of live music, indulge in delicious treats, and create unforgettable memories with family and
+                    friends. Don't miss out on the hottest event of the summer &#8209; come make a splash with us! But
+                    that's
+                    not all &#8209; our Summer Splash Party is not just about water fun. Dance to the beat of live music
+                    performances, indulge your taste buds with delectable treats from our food stalls, and capture
+                    unforgettable moments with family and friends against the backdrop of summer's finest festivities.
+                </div>
+            </div>
+
+            <button class="btn2" data-bs-toggle="modal" data-bs-target="#summerSplashIndividualModal">Register
+                (Individual)</button>
+            <button class="btn2 butn" data-bs-toggle="modal" data-bs-target="#summerSplashGroupModal">Register
+                (Group)</button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#summerSplashDetailsModal">Details</button>
+
+
+        </div>
+
+
+        <div class="main">
+            <h1 class="fw-semibold">Thrill-seeker Night</h1>
+            <p class="icon mb-0">15-08-2024 8:00am - 15-08-2024 8:00pm</p>
+            <p style="  color: rgb(121, 38, 237);">123 FunStreet ,CityVilla </p>
+
+            <div class="col-12  rounded-4 my-4 mx-auto txt">
+                <div style=" float: left;" class="small-img me-4 imgdiv"> <img style="border-radius: 10px;"
+                        src="src/thrill.png" alt=""></div>
+                <div class="para" style="color: rgb(74, 74, 74);">Get ready to make a splash at Funzone Park's Summer
+                    Prepare for an adrenaline-fueled adventure like no other at Funzone Park's Thrill-seeker Night! On
+                    September 10th, we're turning up the excitement as we invite all thrill-seekers to experience the
+                    park's most exhilarating rides under the enchanting glow of the moon.Gear up for an electrifying
+                    evening filled with heart-pounding thrills and spine-tingling excitement. Feel the rush of
+                    adrenaline as you conquer our pulse-pounding roller coasters, brave the dizzying heights of our
+                    towering attractions, and defy gravity with our gravity-defying rides.But the thrills don't end
+                    there &#8209; immerse yourself in the park's electrifying atmosphere, where the air crackles with
+                    excitement and every corner offers a new adventure. Whether you're a seasoned thrill-seeker or a
+                    first-time adrenaline junkie, Thrill-seeker Night promises an unforgettable experience that will
+                    leave you on the edge of your seat.
+                </div>
+            </div>
+
+            <button class="btn2" data-bs-toggle="modal" data-bs-target="#summerSplashIndividualModal">Register
+                (Individual)</button>
+            <button class="btn2 butn" data-bs-toggle="modal" data-bs-target="#summerSplashGroupModal">Register
+                (Group)</button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#ThrillNightDetailsModal">Details</button>
+
+
+        </div>
+
+
+        <h1 class="text-center mt-3 fw-bold" style="color: black;">Past <span style="color: rgb(242,145,38);">Events</span> </h1>
+
+
+        <div class="main">
+            <h1 class="fw-semibold">Spring Fling Festival</h1>
+            <p class="icon mb-0">20-04-2024 8:00am - 15-08-2024 8:00pm</p>
+            <p style="  color: rgb(121, 38, 237);">123 FunStreet ,CityVilla </p>
+
+            <div class="col-12  rounded-4 my-4 mx-auto txt">
+                <div style=" float: left;" class="small-img me-4 imgdiv"> <img style="border-radius: 10px;"
+                        src="src/spring.png" alt=""></div>
+                <div class="para" style="color: rgb(74, 74, 74);">Welcome the arrival of spring with open arms at
+                    Funzone Park's Spring Fling Festival! On April 20th, join us for a day filled with blooming flowers,
+                    vibrant colors, and joyful festivities as we celebrate the season of renewal. Experience the beauty
+                    of spring in full bloom as you wander through our enchanting gardens, adorned with a kaleidoscope of
+                    flowers in every hue. Immerse yourself in the sounds of laughter and music as our lively
+                    entertainment fills the air with joyous melodies. Indulge your senses with a feast of springtime
+                    delights, from mouthwatering treats to refreshing beverages that capture the essence of the season.
+                    Take part in fun-filled activities for all ages, from egg hunts to arts and crafts, ensuring a day
+                    of laughter and memories for the whole family.
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="main mb-5">
+            <h1 class="fw-semibold">Winter Wonderland Parade</h1>
+            <p class="icon mb-0">25-12-2023 8:00am - 25-12-2023 8:00pm</p>
+            <p style="  color: rgb(121, 38, 237);">123 FunStreet ,CityVilla </p>
+
+            <div class="col-12  rounded-4 my-4 mx-auto txt">
+                <div style=" float: left;" class="small-img me-4 imgdiv"> <img style="border-radius: 10px;"
+                        src="src/winter.png" alt=""></div>
+                <div class="para" style="color: rgb(74, 74, 74);">Experience the magic of the holiday season like never
+                    before at Funzone Park's Winter Wonderland Parade! On December 25th, join us for a spectacle of
+                    lights, music, and festive cheer as we celebrate the most wonderful time of the year. Step into a
+                    world of enchantment as our dazzling parade winds its way through the park, featuring elaborately
+                    decorated floats, mesmerizing performances, and beloved holiday characters brought to life. Marvel
+                    at the twinkling lights and glittering decorations that adorn every corner, creating a winter
+                    wonderland straight out of a fairytale. Immerse yourself in the holiday spirit as you sing along to
+                    classic carols, sip on hot cocoa, and delight in the joyous atmosphere that fills the air. Take in
+                    the sights and sounds of the season as you stroll through our festive village, where you'll find
+                    seasonal treats, handcrafted gifts, and heartwarming surprises around every corner.
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+<!-- Modals -->
+<div class="modal fade " id="summerSplashIndividualModal" tabindex="-1"
+    aria-labelledby="summerSplashIndividualModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="summerSplashIndividualModalLabel">Party - Individual Registration</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Please fill out the form below to register for the Party as an individual:</p>
+                <!-- Individual registration form content here -->
+                <form id="individualRegistrationForm">
+                    <div class="mb-3">
+                        <label for="individualName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="individualName">
+                        <span class="error" id="individualNameError"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="partyName" class="form-label">Party</label>
+                        <select class="form-control custom-select" name="" id="partyName">
+                            <option value="Summer Splash Party">Summer Splash Party</option>
+                            <option value="Thrill-seeker Night">Thrill-seeker Night</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="individualEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="individualEmail" aria-describedby="emailHelp">
+                        <span class="error" id="individualEmailError"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="individualPhone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="individualPhone">
+                        <span class="error" id="individualPhoneError"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary ms-3" data-bs-dismiss="modal">Close</button>
+                <button onclick="register()" type="button" class="btn btn-primary ms-3">Register</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <!-- Group Registration Modal -->
+<div class="modal fade" id="summerSplashGroupModal" tabindex="-1" aria-labelledby="summerSplashGroupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="summerSplashGroupModalLabel">Party - Group Registration</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Please fill out the form below to register for the Party as a group:</p>
+                <!-- Group registration form content here -->
+                <form id="groupRegistrationForm">
+                    <div class="mb-3">
+                        <label for="groupName" class="form-label">Group Name</label>
+                        <input type="text" class="form-control" id="groupName">
+                        <span class="error" id="groupNameError"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="partyName" class="form-label">Party</label>
+                        <select class="form-control custom-select" name="" id="">
+                            <option value="">Summer Splash Party</option>
+                            <option value="">Thrill-seeker Night</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="groupEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="groupEmail" aria-describedby="emailHelp">
+                        <span class="error" id="groupEmailError"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="groupPhone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="groupPhone">
+                        <span class="error" id="groupPhoneError"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="groupSize" class="form-label">Group Size</label>
+                        <input type="number" class="form-control" id="groupSize" min="1">
+                        <span class="error" id="groupSizeError"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary ms-3" data-bs-dismiss="modal">Close</button>
+                <button onclick="registerGroup()" type="button" class="btn btn-primary ms-3">Register</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Summer Splash Party Details Modal -->
+    <div class="modal fade" id="summerSplashDetailsModal" tabindex="-1" aria-labelledby="summerSplashDetailsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="summerSplashDetailsModalLabel">Summer Splash Party - Event Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                
+
+                <div class="modal-body">
+                    <p>Date: August 14th, 2024</p>
+                    <p>Time: 80:00 AM - 8:00 PM</p>
+                    <p>Location: Funzone Park</p>
+                    <p>Description: Join us for the ultimate Party, where you can cool off and have fun with water
+                        games, live DJ music, and refreshing treats. This event is perfect for families and friends to
+                        beat the heat and enjoy the summer vibes together.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary ms-3" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+<!-- Thrill Night Detail -->
+    <div class="modal fade" id="ThrillNightDetailsModal" tabindex="-1" aria-labelledby="summerSplashDetailsModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="summerSplashDetailsModalLabel">Thrill Night Party - Event Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+          
+
+            <div class="modal-body">
+                <p>Date: August 15th, 2024</p>
+                <p>Time: 80:00 AM - 8:00 PM</p>
+                <p>Location: Funzone Park</p>
+                <p>Description: Join us for the ultimate Party, where you can cool off and have fun with water
+                    games, live DJ music, and refreshing treats. This event is perfect for families and friends to
+                    beat the heat and enjoy the summer vibes together.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary ms-3" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <!-- Footer  -->
+  <footer class="mt-5">
+    <div class="container">
+        <div class="footer-row">
+            <div class="footer-column">
+                <h2 class="footer-heading">About Us</h2>
+                <p class="footer-text">Funzone is dedicated to providing exhilarating experiences for thrill-seekers
+                    of all ages. Explore our diverse range of rides and attractions!</p>
+            </div>
+            <div class="footer-column">
+                <h2 class="footer-heading">Quick Links</h2>
+                <ul class="footer-list">
+                    <li><a href="index.html" class="footer-link">Home</a></li>
+                    <li><a href="parkcharacterpg.html" class="footer-link">Park Character</a></li>
+                    <li><a href="LeisureAndDiningpg.html" class="footer-link">Leisure and Dining</a></li>
+                    <li><a href="whatsuppg.html" class="footer-link">Whats Up</a></li>
+                    <li><a href="Experience.html" class="footer-link">Experience</a></li>
+                    <li><a href="parkinformation.html" class="footer-link">Park Information</a></li>
+                    <li><a href="Businessoppor.html" class="footer-link">Business Opportunities</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h2 class="footer-heading">Contact Us</h2>
+                <ul class="footer-list">
+                    <li><i class="fa fa-phone"></i> +123-456-7890</li>
+                    <li><i class="fa fa-envelope"></i> info@funzone.com</li>
+                    <li><i class="fa fa-map-marker"></i> 123 Fun Street, Cityville</li>
+                </ul>
+                <div class="social-icons">
+                    <a target="_blank" href="https://www.facebook.com/" class="footer-link"><i class="fab fa-facebook"></i></a>
+                    <!-- <a target="_top" href="www" class="footer-link"><i class="fab fa-twitter"></i></a> -->
+                    <a target="_blank" href="https://www.instagram.com/" class="footer-link"><i
+                            class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/" class="footer-link"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="footer-text">&copy; 2024 Funzone | Designed by Your Company</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+        <script>
+            
+
+function register() {
+    // Clear previous error messages and reset border color
+    document.querySelectorAll('.error').forEach(function(span) {
+        span.textContent = '';
+    });
+
+    document.querySelectorAll('input').forEach(function(input) {
+        input.classList.remove('invalid');
+    });
+
+    // Get form values
+    var name = document.getElementById("individualName").value.trim();
+    var email = document.getElementById("individualEmail").value.trim();
+    var phone = document.getElementById("individualPhone").value.trim();
+
+    // Validation flags
+    var valid = true;
+
+    // Name validation
+    var nameRegex = /^[a-zA-Z\s]+$/;
+    if (name === "") {
+        document.getElementById('individualNameError').textContent = 'Please fill out this field';
+        document.getElementById('individualName').classList.add('invalid');
+        valid = false;
+    } else if (!nameRegex.test(name)) {
+        document.getElementById('individualNameError').textContent = 'Enter a correct name';
+        document.getElementById('individualName').classList.add('invalid');
+        valid = false;
+    }
+
+    // Email validation
+    var emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    if (email === "") {
+        document.getElementById('individualEmailError').textContent = 'Please fill out this field';
+        document.getElementById('individualEmail').classList.add('invalid');
+        valid = false;
+    } else if (!emailRegex.test(email)) {
+        document.getElementById('individualEmailError').textContent = 'Invalid email';
+        document.getElementById('individualEmail').classList.add('invalid');
+        valid = false;
+    }
+
+    // Phone validation
+    var phoneRegex = /^03\d{9}$/;
+    if (phone === "") {
+        document.getElementById('individualPhoneError').textContent = 'Please fill out this field';
+        document.getElementById('individualPhone').classList.add('invalid');
+        valid = false;
+    } else if (!phoneRegex.test(phone)) {
+        document.getElementById('individualPhoneError').textContent = 'Enter a correct number';
+        document.getElementById('individualPhone').classList.add('invalid');
+        valid = false;
+    }
+
+    // If all fields are valid, clear form and show success message
+    if (valid) {
+        
+        var thankYouMessage = 'Thank you!\n\nYour form has been submitted. We will contact you shortly to confirm your registration through a phone call.';
+        alert(thankYouMessage);
+        document.getElementById("individualRegistrationForm").reset();
+        $('#summerSplashIndividualModal').modal('hide'); // Hide the modal
+    }
+}
+
+
+
+
+    function registerGroup() {
+        // Clear previous error messages and remove invalid class
+        document.getElementById('groupNameError').textContent = '';
+        document.getElementById('groupEmailError').textContent = '';
+        document.getElementById('groupPhoneError').textContent = '';
+        document.getElementById('groupSizeError').textContent = '';
+        
+        // Remove invalid class from all input fields
+        var inputs = document.querySelectorAll('.form-control');
+        inputs.forEach(function(input) {
+            input.classList.remove('invalid');
+        });
+    
+        // Get form values
+        var groupName = document.getElementById("groupName").value;
+        var groupEmail = document.getElementById("groupEmail").value;
+        var groupPhone = document.getElementById("groupPhone").value;
+        var groupSize = document.getElementById("groupSize").value;
+    
+        // Validation flags
+        var valid = true;
+    
+        // Group Name validation
+        var nameRegex = /^[a-zA-Z\s]+$/;
+        if (groupName === "") {
+            document.getElementById('groupNameError').textContent = 'Please fill out this field';
+            document.getElementById('groupName').classList.add('invalid');
+            valid = false;
+        } else if (!nameRegex.test(groupName)) {
+            document.getElementById('groupNameError').textContent = 'Enter a correct name';
+            document.getElementById('groupName').classList.add('invalid');
+            valid = false;
+        }
+    
+        // Email validation
+        var emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+        if (groupEmail === "") {
+            document.getElementById('groupEmailError').textContent = 'Please fill out this field';
+            document.getElementById('groupEmail').classList.add('invalid');
+            valid = false;
+        } else if (!emailRegex.test(groupEmail)) {
+            document.getElementById('groupEmailError').textContent = 'Invalid email';
+            document.getElementById('groupEmail').classList.add('invalid');
+            valid = false;
+        }
+    
+        // Phone validation
+        var phoneRegex = /^03\d{9}$/;
+        if (groupPhone === "") {
+            document.getElementById('groupPhoneError').textContent = 'Please fill out this field';
+            document.getElementById('groupPhone').classList.add('invalid');
+            valid = false;
+        } else if (!phoneRegex.test(groupPhone)) {
+            document.getElementById('groupPhoneError').textContent = 'Enter a correct number';
+            document.getElementById('groupPhone').classList.add('invalid');
+            valid = false;
+        }
+    
+        // Group Size validation
+        if (groupSize === "") {
+            document.getElementById('groupSizeError').textContent = 'Please fill out this field';
+            document.getElementById('groupSize').classList.add('invalid');
+            valid = false;
+        } else if (parseInt(groupSize) < 2) { // Adjusted condition here
+            document.getElementById('groupSizeError').textContent = 'Group size must be greater than 1';
+            document.getElementById('groupSize').classList.add('invalid');
+            valid = false;
+        }
+    
+        // If all fields are valid, clear form and show success message
+        if (valid) {
+
+            var thankYouMessage = 'Thank you!\n\nYour form has been submitted. We will contact you shortly to confirm your registration through a phone call.';
+            alert(thankYouMessage);
+
+            document.getElementById("groupRegistrationForm").reset();
+            $('#summerSplashGroupModal').modal('hide'); // Hide the modal
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function () {
+            const currentLocation = window.location.pathname.split("/").pop();
+            const navLinks = document.querySelectorAll('.nav-link, .ddlink');
+            const funzonePages = ['Experience.html', 'LeisureAndDiningpg.html', 'parkcharacterpg.html', 'whatsuppg.html'];
+
+            let isFunzoneActive = false;
+
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href').split("/").pop();
+                if (linkPath === currentLocation) {
+                    link.classList.add('active');
+                    if (funzonePages.includes(linkPath)) {
+                        isFunzoneActive = true;
+                    }
+                }
+            });
+
+            if (isFunzoneActive) {
+                document.querySelector('.nav-item.dropdown .nav-link').classList.add('active');
+            }
+        });
+        </script>
+</body>
+
+</html>
+
+
+

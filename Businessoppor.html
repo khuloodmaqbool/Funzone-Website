@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Opportunities</title>
+    <link rel="icon" type="image/x-icon" href="src/logonew.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    <style>
+
+
+    
+.business .imgdiv {
+            /* width: 500px; */
+            height: 450px;
+        }
+
+        .business p {
+            color: 545454;
+        }
+
+        .business button{
+
+background-color: rgb(121, 38, 237);
+
+padding: 10px 20px 10px 20px;
+border-radius: 10px;
+color: white;
+box-shadow: 0px 0px 10px 0px white;
+border: 1px solid rgb(121, 38, 237);
+transition: 0.3s;
+
+
+}
+
+.business button:hover {
+background-color: white;
+color: rgb(121, 38, 237);
+box-shadow: 0px 0px 10px 0px 7926ED;
+cursor: pointer;
+border: 0.5px solid rgb(121, 38, 237);
+}
+
+        @media only screen and (max-width:992px) {
+            .business .imgdiv {
+                height: 350px;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media only screen and (max-width:600px) {
+            .business .imgdiv {
+                height: 250px;
+            }
+        }
+
+        @media only screen and (max-width:780px) {
+            .business p {
+                font-size: 14px;
+            }
+
+            .business h1 {
+                font-size: 25px;
+            }
+
+            .business button{
+                font-size: 15px;
+            }
+        }
+
+        @media only screen and (min-width:992px) {
+            .business .imgdivfrst {
+                margin-right: 20px;
+            }
+
+            .business .imgdivscnd {
+                margin-left: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+    .business .characterimg{
+        width: 90%;
+    }
+        }
+        /* business opportunity modal  */
+        .modal .error {
+            color: red;
+        }
+
+        .custom-select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: url('data:image/svg+xml;utf8,<svg fill="%23333" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center/12px 12px;
+            padding-right: 30px;
+        }
+
+        .modal .invalid {
+            border-color: red;
+        }
+
+        @media only screen and (max-width: 780px) {
+
+            .modal span,
+            .modal p,
+            .modal input,
+            .modal label,
+            .modal select {
+                font-size: 15px;
+            }
+
+            .modal h5 {
+                font-size: 17px;
+            }
+
+            .modal button {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- navbar  -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <div style="width: 70px; height: 70px; background: url(src/logonew.png); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link mx-3" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown mx-3">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Funzone Adventures
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item ddlink" href="Experience.html">Experience</a></li>
+                        <li><a class="dropdown-item ddlink" href="LeisureAndDiningpg.html">Leisure and Dining</a></li>
+                        <li><a class="dropdown-item ddlink" href="parkcharacterpg.html">Parks Characters</a></li>
+                        <li><a class="dropdown-item ddlink" href="whatsuppg.html">Whats Up</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="parkinformation.html">Park Information</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="Businessoppor.html">Business Opportunities</a>
+                </li>
+                <li class="nav-item mx-3">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    
+    <!-- Gradient circle -->
+
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+    <div class="circle circle3"></div>
+    <div class="circle circle4"></div>
+>
+
+<!-- Elements  -->
+
+<div class="ele1"><img   src="src/shape2.png" alt=""></div>
+<div class="ele2"><img  src="src/shape1.png" alt=""></div>
+<div class="ele3"><img   src="src/shape3.png" alt=""></div>
+<div class="ele4"><img  src="src/shape4.png" alt=""></div>
+<!-- <div class="ele5"><img  src="src/shape2.png" alt=""></div> -->
+
+
+
+
+<!-- bounce img  -->
+<img class="bounceimg" src="src/bouncing img.png" alt="">
+
+
+
+  <!-- Hero section -->
+  <div class="hero-section">
+    <div class="hero-image d-flex justify-content-center align-items-center">
+        <div style="display: grid; justify-content: center;" class="main container">
+            <h1 class="text-center text-white">Discover the Magic of   <span style="color: rgb(242,145,38);">Fun Zone</span></h1>
+            <p class="text-center text-white">Exciting rides, delicious dining, unforgettable fun at funzone. Join us today! and
+                make memories.</p>
+                <a  class="mx-auto"  href="index.html"><button >Explore More</button></a>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+    <div class="business container">
+<h1 class="fw-bold text-center mt-5 mb-5">Business <span style="color: rgb(242,145,38);"> Opportunities</span></h1>
+
+        <div  style="margin-top: 30px;">
+            <div  style="background: url(src/map\ image.svg); background-repeat: no-repeat; background-size: contain; background-position: center;"  class="row align-items-center justify-content-center">
+
+                <div style=" background: url(src/franchise.png); background-repeat: no-repeat; background-size: cover; background-position: center; border-radius: 20px;"
+                    class="col-xxl-5 col-xl-5 col-lg-5 col-md-9  col-sm-12 imgdiv imgdivfrst align-items-center characterimg">
+                </div>
+
+                <div  class="col-xxl-6 col-xl-6 col-lg-5 col-md-9  col-sm-12 ">
+                    <h1 class="fw-semibold mb-4">Franchise Opportunities</h1>
+                    <p class="mb-4">Join our family of brands and bring the magic of Funzone Park to new locations around the world. With proven business models and comprehensive support, our franchise opportunities offer a pathway to success in the thriving entertainment industry.</p>
+               <button  data-bs-toggle="modal" data-bs-target="#ticketBookModal">Apply Now</button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div    style="margin-top: 70px;">
+            <div  style="background: url(src/map\ image.svg); background-repeat: no-repeat; background-size: contain; background-position: center;"  class="row align-items-center justify-content-center">
+                <div class="col-xxl-6 col-xl-6 col-lg-5 col-md-9  col-sm-12 ">
+                    <h1 class="fw-semibold mb-4">Vendor Partnerships</h1>
+             
+                    <p class="mb-4">Become a vendor partner and showcase your products or services to our diverse audience of visitors. From food and beverage vendors to merchandise and souvenir suppliers, there are countless opportunities to connect with our guests and enhance their park experience.</p>
+                <button  data-bs-toggle="modal" data-bs-target="#ticketBookModal" class="mb-4">Apply Now</button>
+                
+                
+                </div>
+                <div style=" background: url(src/vendor.png); background-repeat: no-repeat; background-size: contain; background-position: center; border-radius: 20px;"
+                    class="col-xxl-5 col-xl-5 col-lg-5 col-md-9  col-sm-12 imgdiv imgdivscnd align-items-center characterimg">
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 70px;">
+            <div  style="background: url(src/map\ image.svg); background-repeat: no-repeat; background-size: contain; background-position: center;"  class="row align-items-center justify-content-center">
+
+                <div style=" background: url(src/sponsorship.png); background-repeat: no-repeat; background-size: cover; background-position: center; border-radius: 20px;"
+                    class="col-xxl-5 col-xl-5 col-lg-5 col-md-9  col-sm-12 imgdiv imgdivfrst align-items-center characterimg">
+                </div>
+                <div class="col-xxl-6 col-xl-6 col-lg-5 col-md-9  col-sm-12 ">
+                    <h1 class="fw-semibold mb-4">Sponsorship Opportunity</h1>
+                   
+                    <p  class="mb-4">Elevate your brand visibility and engage with our audience through strategic sponsorship opportunities. Whether it's sponsoring a ride, event, or attraction, we offer customized partnership packages that align with your marketing objectives and reach your target audience effectively.</p>
+                <button  data-bs-toggle="modal" data-bs-target="#ticketBookModal">Apply Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div  style="margin-top: 70px;">
+            <div  style="background: url(src/map\ image.svg); background-repeat: no-repeat; background-size: contain; background-position: center;"  class="row align-items-center justify-content-center">
+                <div class="col-xxl-6 col-xl-6 col-lg-5 col-md-9  col-sm-12 ">
+                    <h1 class="fw-semibold mb-4">Investment Opportunities</h1>
+            
+                    <p  class="mb-4">Explore investment opportunities in Funzone Park and be a part of our continued growth and expansion. From funding new attractions to developing infrastructure, there are various avenues for investors to contribute to the success of our park.</p>
+                <button  data-bs-toggle="modal" data-bs-target="#ticketBookModal" class="mb-4">Invest Now</button>
+                </div>
+                <div style=" background: url(src/investment.png); background-repeat: no-repeat; background-size: cover; background-position: center; border-radius: 20px;"
+                    class="col-xxl-5 col-xl-5 col-lg-5 col-md-9  col-sm-12 imgdiv imgdivscnd align-items-center characterimg">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+ <!-- Footer  -->
+ <footer class="mt-5">
+    <div class="container">
+        <div class="footer-row">
+            <div class="footer-column">
+                <h2 class="footer-heading">About Us</h2>
+                <p class="footer-text">Funzone is dedicated to providing exhilarating experiences for thrill-seekers
+                    of all ages. Explore our diverse range of rides and attractions!</p>
+            </div>
+            <div class="footer-column">
+                <h2 class="footer-heading">Quick Links</h2>
+                <ul class="footer-list">
+                    <li><a href="index.html" class="footer-link">Home</a></li>
+                    <li><a href="parkcharacterpg.html" class="footer-link">Park Character</a></li>
+                    <li><a href="LeisureAndDiningpg.html" class="footer-link">Leisure and Dining</a></li>
+                    <li><a href="whatsuppg.html" class="footer-link">Whats Up</a></li>
+                    <li><a href="Experience.html" class="footer-link">Experience</a></li>
+                    <li><a href="parkinformation.html" class="footer-link">Park Information</a></li>
+                    <li><a href="Businessoppor.html" class="footer-link">Business Opportunities</a></li>
+                    <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h2 class="footer-heading">Contact Us</h2>
+                <ul class="footer-list">
+                    <li><i class="fa fa-phone"></i> +123-456-7890</li>
+                    <li><i class="fa fa-envelope"></i> info@funzone.com</li>
+                    <li><i class="fa fa-map-marker"></i> 123 Fun Street, Cityville</li>
+                </ul>
+                <div class="social-icons">
+                    <a target="_blank" href="https://www.facebook.com/" class="footer-link"><i class="fab fa-facebook"></i></a>
+                    <!-- <a target="_top" href="www" class="footer-link"><i class="fab fa-twitter"></i></a> -->
+                    <a target="_blank" href="https://www.instagram.com/" class="footer-link"><i
+                            class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/" class="footer-link"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="footer-text">&copy; 2024 Funzone | Designed by Your Company</p>
+        </div>
+    </div>
+</footer>
+
+  <!--business Modals -->
+  <div class="modal fade" id="ticketBookModal" tabindex="-1" aria-labelledby="ticketBookModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="ticketBookModalLabel">Business Opportunity</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Please fill out the form below to apply for an opportunity</p>
+              <form id="ticketBookingForm">
+                  <div class="mb-3">
+                      <label for="ticketBookingName" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="ticketBookingName">
+                      <span class="error" id="ticketBookingNameError"></span>
+                  </div>
+
+                  <div class="mb-3">
+                      <label for="ticketBookingEmail" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="ticketBookingEmail"
+                          aria-describedby="emailHelp">
+                      <span class="error" id="ticketBookingEmailError"></span>
+                  </div>
+
+                  <div class="mb-3">
+                      <label for="ticketBookingPhone" class="form-label">Phone Number</label>
+                      <input type="tel" class="form-control" id="ticketBookingPhone">
+                      <span class="error" id="ticketBookingPhoneError"></span>
+                  </div>
+
+                  <div class="mb-3">
+                      <label for="ticketBookingMessage" class="form-label">Message</label>
+                      <textarea class="form-control" id="ticketBookingMessage"></textarea>
+                      <span class="error" id="ticketBookingMessageError"></span>
+                  </div>
+
+                  <div class="mb-3">
+                      <label for="ticketType" class="form-label">Opportunity Type</label>
+                      <select class="form-control custom-select" id="ticketType">
+                          <option value="">Select an opportunity</option>
+                          <option value="Franchise">Franchise</option>
+                          <option value="Vendor">Vendor</option>
+                          <option value="Sponsorship">Sponsorship</option>
+                          <option value="Investment">Investment</option>
+                      </select>
+                      <span class="error" id="ticketTypeError"></span>
+                  </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary ms-3" data-bs-dismiss="modal">Close</button>
+              <button onclick="register()" type="button" class="btn btn-primary ms-3">Submit</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script>
+        function register() {
+            // Clear previous error messages and reset border color
+            document.querySelectorAll('.error').forEach(function (span) {
+                span.textContent = '';
+            });
+
+            document.querySelectorAll('input, textarea, select').forEach(function (element) {
+                element.classList.remove('invalid');
+            });
+
+            // Get form values
+            var name = document.getElementById("ticketBookingName").value.trim();
+            var email = document.getElementById("ticketBookingEmail").value.trim();
+            var phone = document.getElementById("ticketBookingPhone").value.trim();
+            var message = document.getElementById("ticketBookingMessage").value.trim();
+            var opportunity = document.getElementById("ticketType").value.trim();
+
+            // Validation flags
+            var valid = true;
+
+            // Name validation
+            var nameRegex = /^[a-zA-Z\s]+$/;
+            if (name === "") {
+                document.getElementById('ticketBookingNameError').textContent = 'Please fill out this field';
+                document.getElementById('ticketBookingName').classList.add('invalid');
+                valid = false;
+            } else if (!nameRegex.test(name)) {
+                document.getElementById('ticketBookingNameError').textContent = 'Enter a correct name';
+                document.getElementById('ticketBookingName').classList.add('invalid');
+                valid = false;
+            }
+
+            // Email validation
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+            if (email === "") {
+                document.getElementById('ticketBookingEmailError').textContent = 'Please fill out this field';
+                document.getElementById('ticketBookingEmail').classList.add('invalid');
+                valid = false;
+            } else if (!emailRegex.test(email)) {
+                document.getElementById('ticketBookingEmailError').textContent = 'Invalid email';
+                document.getElementById('ticketBookingEmail').classList.add('invalid');
+                valid = false;
+            }
+
+            // Phone validation
+            var phoneRegex = /^03\d{9}$/;
+            if (phone === "") {
+                document.getElementById('ticketBookingPhoneError').textContent = 'Please fill out this field';
+                document.getElementById('ticketBookingPhone').classList.add('invalid');
+                valid = false;
+            } else if (!phoneRegex.test(phone)) {
+                document.getElementById('ticketBookingPhoneError').textContent = 'Enter a correct number';
+                document.getElementById('ticketBookingPhone').classList.add('invalid');
+                valid = false;
+            }
+
+            // Message validation
+            if (message === "") {
+                document.getElementById('ticketBookingMessageError').textContent = 'Please fill out this field';
+                document.getElementById('ticketBookingMessage').classList.add('invalid');
+                valid = false;
+            }
+
+            // Opportunity type validation
+            if (opportunity === "") {
+                document.getElementById('ticketTypeError').textContent = 'Please pick any one of the opportunities';
+                document.getElementById('ticketType').classList.add('invalid');
+                valid = false;
+            }
+
+            // If all fields are valid, clear form and show success message
+            if (valid) {
+           
+
+
+                var thankYouMessage = 'Thank you!\n\nYour form has been submitted. We will contact you shortly to confirm your registration through a phone call.';
+            alert(thankYouMessage);
+
+            document.getElementById("ticketBookingForm").reset();
+            $('#ticketBookModal').modal('hide'); // Hide the modal
+
+            }
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentLocation = window.location.pathname.split("/").pop();
+            const navLinks = document.querySelectorAll('.nav-link, .ddlink');
+            const funzonePages = ['Experience.html', 'LeisureAndDiningpg.html', 'parkcharacterpg.html', 'whatsuppg.html'];
+
+            let isFunzoneActive = false;
+
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href').split("/").pop();
+                if (linkPath === currentLocation) {
+                    link.classList.add('active');
+                    if (funzonePages.includes(linkPath)) {
+                        isFunzoneActive = true;
+                    }
+                }
+            });
+
+            if (isFunzoneActive) {
+                document.querySelector('.nav-item.dropdown .nav-link').classList.add('active');
+            }
+        });
+
+        
+    </script>
+
+</body>
+
+</html>
